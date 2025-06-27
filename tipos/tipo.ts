@@ -129,3 +129,29 @@ function verificarStatus(status: StatusPedido) {
 }
 
 verificarStatus(StatusPedido.Enviado); // Saída: O pedido foi enviado.
+
+// any - conversa com tipos dinâmicos. Não muito utilizada em TS. 
+let carro: any = 'BMW'
+console.log(carro);
+carro = { marca: 'BMW', ano: 2019 }
+console.log(carro);
+
+// funcões
+function retornaMeuNome(): string { //funcao tipada como string
+    return nome // variável nome criada e atribuida acima. 
+    //return minhaIdade --> aponta erro, pois a variável minha idade retorna um number 
+}
+console.log(retornaMeuNome());
+
+function digaOi(): void { //Como não retorna nada pode ser tipada como void
+    console.log('Oi');
+    // return minhaIdade; -> aponta erro, pois é do tipo void
+}
+
+digaOi()
+
+function multiplicar(numA: number, numB: number): number {
+    return numA * numB;
+}
+
+console.log(multiplicar(2.6,4));
