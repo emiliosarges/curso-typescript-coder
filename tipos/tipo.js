@@ -132,3 +132,18 @@ function multiplicar(numA, numB) {
     return numA * numB;
 }
 console.log(multiplicar(2.6, 4));
+const teste = function (a, b) {
+    if (a > b) {
+        return false;
+    }
+    else {
+        return true;
+    }
+};
+console.log(teste(1, 5));
+//tipo funcao
+let calculo;
+//calculo = digaOi  -> aponta erro
+//calculo = multiplicar -> aponta erro
+calculo = teste;
+console.log(calculo(5, 1)); //valor false

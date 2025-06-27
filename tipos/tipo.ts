@@ -153,5 +153,20 @@ digaOi()
 function multiplicar(numA: number, numB: number): number {
     return numA * numB;
 }
-
 console.log(multiplicar(2.6,4));
+
+const teste = function (a: number, b: number) : boolean {
+    if (a > b){
+        return false
+    }else{
+        return true
+    }
+}
+console.log(teste(1,5));
+
+//tipo funcao
+let calculo: (numeroA: number, numeroB: number) => boolean
+//calculo = digaOi  -> aponta erro
+//calculo = multiplicar -> aponta erro
+calculo = teste   
+console.log(calculo(5,1)); //valor false
